@@ -1,0 +1,8 @@
+cd ..
+cd /etc/yum.repos.d
+sudo echo "sudo sh -c 'echo \"[docker]\" >docker.repo' " > dockerscript
+sudo echo "sudo sh -c 'echo \"baseurl = https://download.docker.com/linux/centos/7/x86_64/stable\" >> docker.repo' ">> dockerscript
+sudo echo "sudo sh -c 'echo \"gpgcheck = 0\" >> docker.repo' " >> dockerscript
+sudo yum install docker-ce --nobest -y
+sudo systemctl start docker
+sudo systemctl status docker
