@@ -1,11 +1,6 @@
 echo "sudo yum install java -y" > jenkinsscript
-
 echo "sudo yum install wget" >> jenkinsscript
-
 echo "sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo" >> jenkinsscript
-
 echo "sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key" >> jenkinsscript
-
 echo "sudo yum install jenkins -y" >> jenkinsscript
-
 echo "sudo systemctl start jenkins" >> jenkinsscript
